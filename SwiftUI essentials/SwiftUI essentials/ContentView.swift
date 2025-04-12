@@ -14,21 +14,6 @@ struct ContentView: View {
                 Spacer()
                     .frame(maxWidth: .infinity)
                 VStack(spacing: CGFloat.zero) {
-                    Color.orange
-                        .frame(height: 15)
-                    ZStack {
-                        Color.white
-                            .frame(height: 15)
-                        Circle()
-                            .foregroundStyle(Color.blue)
-                            .frame(height: 8)
-                    }
-                    Color.green
-                        .frame(height: 15)
-                }
-                .frame(width: 70)
-                .clipShape(Circle())
-            }
             VStack(alignment: .leading) {
                 Text("Turtle rock")
                     .font(.title)
