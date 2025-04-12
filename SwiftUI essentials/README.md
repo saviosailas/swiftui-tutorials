@@ -6,10 +6,28 @@ https://developer.apple.com/tutorials/swiftui/creating-and-combining-views
 <img src="iphone.png" height="350">
 
 
-#### ShapeStyle
+### ShapeStyle
 A color or pattern to use when rendering a shape.
 
 https://developer.apple.com/documentation/swiftui/shapestyle
+
+```swift
+Text("environment have multiple values like isEditable, isSearching and etc.")
+    .foregroundStyle(FirstDayStyle())
+
+struct FirstDayStyle: ShapeStyle {
+    func resolve(in environment: EnvironmentValues) -> Color {
+        switch environment.colorScheme {
+        case .dark:
+            return Color.white
+        case .light:
+            return Color.black
+        @unknown default:
+            return Color.black
+        }
+    }
+}
+```
 
 
 ### Canvas WYSIWYG
