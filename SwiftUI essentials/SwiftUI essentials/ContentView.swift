@@ -9,11 +9,20 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
+        Color.red
+            .opacity(0.1)
+        Color.green
+            .opacity(0.2)
+        Color.yellow
+            .opacity(0.2)
+            .frame(maxHeight: .infinity)
         VStack {
             Image(systemName: "globe")
                 .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+                .foregroundStyle(FirstDayStyle())
+            Text("This is swiftui application")
+                .font(.title)
+                .foregroundStyle(FirstDayStyle())
         }
         .padding()
     }
@@ -21,4 +30,18 @@ struct ContentView: View {
 
 #Preview {
     ContentView()
+}
+
+
+struct FirstDayStyle: ShapeStyle {
+    func resolve(in environment: EnvironmentValues) -> Color {
+        switch environment.colorScheme {
+        case .dark:
+            return Color.red //.blendMode(.darken)
+        case .light:
+            return Color.green //.blendMode(.darken)
+        @unknown default:
+            return Color.green //.blendMode(.darken)
+        }
+    }
 }
