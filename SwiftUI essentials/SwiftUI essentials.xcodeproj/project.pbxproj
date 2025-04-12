@@ -9,6 +9,7 @@
 /* Begin PBXFileReference section */
 		85094EBE2DAA4EAD00304CF3 /* SwiftUI essentials.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SwiftUI essentials.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		85094ECF2DAA4EC800304CF3 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		85094F152DAA8A6200304CF3 /* iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iphone.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -34,6 +35,7 @@
 			isa = PBXGroup;
 			children = (
 				85094ECF2DAA4EC800304CF3 /* README.md */,
+				85094F152DAA8A6200304CF3 /* iphone.png */,
 				85094EC02DAA4EAD00304CF3 /* SwiftUI essentials */,
 				85094EBF2DAA4EAD00304CF3 /* Products */,
 			);

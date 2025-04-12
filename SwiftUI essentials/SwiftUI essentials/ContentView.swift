@@ -16,22 +16,27 @@ struct ContentView: View {
                 .frame(width: 350)
                 .offset(y: -150)
                 .padding(.bottom, -150)
-            VStack(spacing: CGFloat.zero) {
-                VStack(alignment: .leading) {
-                    Text("Turtle rock")
-                        .font(.title)
-                        .foregroundStyle(FirstDayStyle())
-                    HStack {
-                        Text("Joshua Tree National Park")
-                            .font(.subheadline)
-                        Spacer()
-                        Text("California")
-                            .font(.subheadline)
-                    }
-                    
+            
+            VStack(alignment: .leading) {
+                Text("Turtle rock")
+                    .font(.title)
+                    .foregroundStyle(FirstDayStyle())
+                HStack {
+                    Text("Joshua Tree National Park")
+                    Spacer()
+                    Text("California")
                 }
-                .padding()
+                .font(.subheadline)
+                .foregroundStyle(.secondary)
+                
+                Divider()
+                
+                Text("About turtle rock")
+                    .font(.title2)
+                Text("Butterflies are winged insects from the lepidopteran superfamily Papilionoidea, characterized by large, often brightly coloured wings that often fold together when at rest, and a conspicuous, fluttering flight. The oldest butterfly fossils have been dated to the Paleocene, about 56 million years ago, though molecular evidence suggests that they likely originated in the Cretaceous.")
+                    .font(.body)
             }
+            .padding()
             Spacer()
         }
     }
