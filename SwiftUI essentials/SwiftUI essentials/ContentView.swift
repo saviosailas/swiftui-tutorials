@@ -10,17 +10,25 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         VStack(spacing: CGFloat.zero) {
-            Color.orange
-                .frame(height: 15)
-            ZStack {
-                Color.white
-                    .frame(height: 15)
-                Circle()
-                    .foregroundStyle(Color.blue)
-                    .frame(height: 10)
+            HStack(alignment: .center) {
+                Spacer()
+                    .frame(maxWidth: .infinity)
+                VStack(spacing: CGFloat.zero) {
+                    Color.orange
+                        .frame(height: 15)
+                    ZStack {
+                        Color.white
+                            .frame(height: 15)
+                        Circle()
+                            .foregroundStyle(Color.blue)
+                            .frame(height: 8)
+                    }
+                    Color.green
+                        .frame(height: 15)
+                }
+                .frame(width: 70)
+                .clipShape(Circle())
             }
-            Color.green
-                .frame(height: 15)
             VStack(alignment: .leading) {
                 Text("Turtle rock")
                     .font(.title)
@@ -35,7 +43,6 @@ struct ContentView: View {
 
             }
             .padding()
-            Spacer()
         }
     }
 }
