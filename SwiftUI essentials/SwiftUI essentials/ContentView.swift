@@ -20,7 +20,7 @@ struct ContentView: View {
             Image(systemName: "globe")
                 .imageScale(.large)
                 .foregroundStyle(FirstDayStyle())
-            Text("This is swiftui application")
+            Text("Turtle rock")
                 .font(.title)
                 .foregroundStyle(FirstDayStyle())
         }
