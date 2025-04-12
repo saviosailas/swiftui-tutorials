@@ -3,7 +3,7 @@
 
 https://developer.apple.com/tutorials/swiftui/creating-and-combining-views
 
-![iphone screenshot](iphone.png "screenshot")
+<img src="iphone.png" height="350">
 
 
 #### ShapeStyle
