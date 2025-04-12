@@ -9,22 +9,34 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Color.red
-            .opacity(0.1)
-        Color.green
-            .opacity(0.2)
-        Color.yellow
-            .opacity(0.2)
-            .frame(maxHeight: .infinity)
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(FirstDayStyle())
-            Text("Turtle rock")
-                .font(.title)
-                .foregroundStyle(FirstDayStyle())
+        VStack(spacing: CGFloat.zero) {
+            Color.orange
+                .frame(height: 15)
+            ZStack {
+                Color.white
+                    .frame(height: 15)
+                Circle()
+                    .foregroundStyle(Color.blue)
+                    .frame(height: 10)
+            }
+            Color.green
+                .frame(height: 15)
+            VStack(alignment: .leading) {
+                Text("Turtle rock")
+                    .font(.title)
+                    .foregroundStyle(FirstDayStyle())
+                HStack {
+                    Text("Joshua Tree National Park")
+                        .font(.subheadline)
+                    Spacer()
+                    Text("California")
+                        .font(.subheadline)
+                }
+
+            }
+            .padding()
+            Spacer()
         }
-        .padding()
     }
 }
 
@@ -37,11 +49,11 @@ struct FirstDayStyle: ShapeStyle {
     func resolve(in environment: EnvironmentValues) -> Color {
         switch environment.colorScheme {
         case .dark:
-            return Color.red //.blendMode(.darken)
+            return Color.white //.blendMode(.darken)
         case .light:
-            return Color.green //.blendMode(.darken)
+            return Color.black //.blendMode(.darken)
         @unknown default:
-            return Color.green //.blendMode(.darken)
+            return Color.black //.blendMode(.darken)
         }
     }
 }
